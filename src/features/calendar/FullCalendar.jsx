@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
-import interactionPlugin from '@fullcalendar/interaction';
 import {
   Box,
   useTheme,
@@ -91,7 +90,7 @@ export const CalendarComponent = () => {
     >
       <FullCalendar
         ref={calendarRef}
-        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        plugins={[dayGridPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
         headerToolbar={{
           left: 'prev,next today',
@@ -99,8 +98,6 @@ export const CalendarComponent = () => {
           right: 'dayGridMonth,timeGridWeek,timeGridDay'
         }}
         events={events}
-        editable={true}
-        selectable={true}
         eventClick={handleEventClick}
         dateClick={handleDateClick}
         height="100%"
