@@ -19,9 +19,7 @@ export const CalendarPage = () => {
     >
       <Typography variant="h4" gutterBottom>
         Calendar
-        <Typography variant="body2" color="textSecondary" gutterBottom>
-        You can drag and drop events to another date & edit and delete events*
-      </Typography>
+       
       </Typography>
       <CalendarComponent />
     </Box>
